@@ -1,1 +1,74 @@
 @import url(../../App.css);
+
+#calcContainer {
+  grid-area: b;
+  height: 50%;
+  width: 100%;
+}
+
+#billAmount {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  margin: 0 auto;
+}
+
+#amount,
+#people {
+  width: 100%;
+  height: 30px;
+  background-color: var(--veryLight);
+  border-radius: 3px;
+  border: none;
+}
+
+label {
+  padding-top: 0.75em;
+  line-height: 2em;
+  font-size: var(--step--4);
+  font-weight: var(--bold);
+  font-family: "Space Mono", monospace;
+  color: var(--moreDark);
+}
+
+#buttonGrid {
+  display: grid;
+  gap: 0.3rem;
+  grid-template: repeat(3, 35px) / repeat(2, 1fr);
+  /* place-items: start; */
+  justify-content: space-between;
+}
+
+#number1,
+#number2,
+#number3,
+#number4,
+#number5 {
+  height: 2.5em;
+  width: 80%;
+  background-color: var(--veryDark);
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+}
+
+#number1:hover,
+#number2:hover,
+#number3:hover,
+#number4:hover,
+#number5:hover {
+  background-color: var(--strongCyan);
+}
+
+#custom {
+  width: 80%;
+  border-radius: 5px;
+  background-color: var(--veryLight);
+  border: none;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+}

@@ -45,10 +45,9 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  gap: 2rem;
-  grid-template: 1px 100px auto / auto 350px auto;
+  grid-template: 1px 150px auto / auto 275px auto;
   grid-template-areas:
-    ". . ." 
+    ". . ."
     ". a ."
     ". b .";
 }
@@ -56,12 +55,22 @@ body {
 #splitterContainer {
   grid-area: a;
   place-self: center;
+  padding-top: 1rem;
 }
 
 #splitterContainer p {
-  margin: .1em 0;
+  margin: 0.1em 0;
   font-size: var(--step--1);
   font-weight: var(--bold);
-  letter-spacing: .6em;
+  line-height: 1.5em;
+  letter-spacing: 0.6em;
   color: var(--veryDark);
+}
+
+#mainContainer {
+  grid-area: b;
+  height: 80%;
+
+  background-color: var(--white);
+  border-radius: 15px 15px 0 0;
 }
