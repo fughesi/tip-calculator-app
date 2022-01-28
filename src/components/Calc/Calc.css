@@ -38,8 +38,6 @@ label {
   display: grid;
   gap: 0.3rem;
   grid-template: repeat(3, 35px) / repeat(2, 1fr);
-  /* place-items: start; */
-  justify-content: space-between;
 }
 
 #number1,
@@ -62,6 +60,14 @@ label {
 #number4:hover,
 #number5:hover {
   background-color: var(--strongCyan);
+}
+
+#number1:active,
+#number2:active,
+#number3:active,
+#number4:active,
+#number5:active {
+  background-color: var(--dark);
 }
 
 #custom {
