@@ -1,1 +1,35 @@
 @import url(../../App.css);
+
+#displayContainer {
+  width: calc(100% - 2rem);
+  padding: 1.5rem;
+  background-color: var(--veryDark);
+  border-radius: 5px;
+}
+
+#top,
+#bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#amount {
+  font-size: var(--step-2);
+  color: var(--strongCyan);
+}
+
+#reset {
+  background-color: var(--strongCyan);
+}
+
+p {
+  font-size: var(--step--3);
+  font-weight: var(--bold);
+  color: var(--light);
+}
+
+span {
+  font-size: var(--step--4);
+  color: var(--strongCyan);
+}

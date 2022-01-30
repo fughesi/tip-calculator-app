@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
 import Calc from "./components/Calc/Calc";
 import Display from "./components/Display/Display";
 
 function App() {
-  const [amount, setAmount] = React.useState("")
-  const [tip, setTip] = React.useState("")
+  const [amount, setAmount] = React.useState("");
+  const [tip, setTip] = React.useState("");
   return (
-    <div id="appWrap">
+    <main id="appWrap">
       <div id="splitterContainer">
         <p>SPLI</p>
         <p>TTER</p>
@@ -16,7 +16,7 @@ function App() {
         <Calc />
         <Display />
       </div>
-    </div>
+    </main>
   );
 }
 

@@ -9,7 +9,7 @@ export default function Calc(props) {
   ));
   console.log(buttonMap);
   return (
-    <div id="calcContainer">
+    <main id="calcContainer">
       <form id="billAmount">
         <label htmlFor="amount">
           Bill
@@ -41,6 +41,6 @@ export default function Calc(props) {
           ></input>
         </label>
       </form>
-    </div>
+    </main>
   );
 }
