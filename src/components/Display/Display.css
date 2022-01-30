@@ -1,6 +1,9 @@
 @import url(../../App.css);
 
 #displayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: calc(100% - 2rem);
   padding: 1.5rem;
   background-color: var(--veryDark);
@@ -14,16 +17,29 @@
   justify-content: space-between;
 }
 
-#amount {
-  font-size: var(--step-2);
+#top p:first-child {
+  margin-top: 0;
+}
+
+#total {
+  margin: 0.75rem 0;
+  font-size: var(--step--2);
   color: var(--strongCyan);
 }
 
 #reset {
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  font-size: var(--step--3);
+  color: var(--veryDark);
+  border-radius: 5px;
   background-color: var(--strongCyan);
+  user-select: none;
 }
 
 p {
+  margin: 0.75rem 0;
   font-size: var(--step--3);
   font-weight: var(--bold);
   color: var(--light);

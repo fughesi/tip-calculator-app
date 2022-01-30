@@ -14,13 +14,34 @@
   margin: 0 auto;
 }
 
+#amount {
+  background-image: url(../../images/icon-dollar.svg);
+}
+
+#people {
+  background-image: url(../../images/icon-person.svg);
+}
+
 #amount,
 #people {
+  padding: 0 5%;
   width: 100%;
   height: 30px;
+
   background-color: var(--veryLight);
   border-radius: 3px;
   border: none;
+  text-align: end;
+  background-size: 0.75em;
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+}
+
+#amount::placeholder,
+#people::placeholder {
+  color: var(--veryDark);
+  font-weight: var(--bold);
+  text-align: end;
 }
 
 label {
@@ -44,7 +65,7 @@ label {
 #number4,
 #number5 {
   height: 2.5em;
-  width: 80%;
+  width: 90%;
   background-color: var(--veryDark);
   border-radius: 5px;
   border: none;
@@ -69,10 +90,33 @@ label {
 }
 
 #custom {
-  width: 80%;
+  width: 90%;
   border-radius: 5px;
   background-color: var(--veryLight);
   border: none;
   font-family: "Space Mono", monospace;
+  font-size: var(--step--4);
   text-align: center;
+  font-weight: var(--bold);
+  color: var(--veryDark);
+  padding: 0 0.175em;
+}
+
+/*********** 
+MEDIA QUERIES 
+************/
+
+@media screen and (min-width: 750px) {
+  #buttonGrid {
+    grid-template: repeat(2, 35px) / repeat(3, 1fr);
+    gap: .35em;
+  }
+  #number1,
+  #number2,
+  #number3,
+  #number4,
+  #number5,
+  #custom {
+    width: 100%;
+  }
 }

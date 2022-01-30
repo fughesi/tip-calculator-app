@@ -76,3 +76,33 @@ body {
   background-color: var(--white);
   border-radius: 15px 15px 0 0;
 }
+
+/*********** 
+MEDIA QUERIES 
+************/
+
+@media screen and (min-width: 650px) {
+  #appWrap {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 200px 300px / 1fr 3fr 1fr;
+    grid-template-areas:
+      ". a ."
+      ". b .";
+  }
+  #mainContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1.25rem;
+    border-radius: 15px;
+  }
+  #calcContainer,
+  #displayContainer {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  #billAmount {
+    justify-content: space-between;
+  }
+}
