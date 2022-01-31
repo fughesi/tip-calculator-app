@@ -59,34 +59,26 @@ label {
   grid-template: repeat(3, 35px) / repeat(2, 1fr);
 }
 
-#number5,
-#number10,
-#number15,
-#number25,
-#number50 {
+#tip {
   height: 2.5em;
   width: 90%;
   background-color: var(--veryDark);
   border-radius: 5px;
   border: none;
+  color: var(--veryLight);
+  font-weight: var(--bold);
   text-align: center;
   font-family: "Space Mono", monospace;
 }
 
-#number5:hover,
-#number10:hover,
-#number15:hover,
-#number25:hover,
-#number50:hover {
+#tip:hover {
   background-color: var(--strongCyan);
+  color: var(--veryDark);
 }
 
-#number5:active,
-#number10:active,
-#number15:active,
-#number25:active,
-#number50:active {
+#tip:active {
   background-color: var(--dark);
+  color: var(--veryDark);
 }
 
 #custom {
@@ -109,13 +101,9 @@ MEDIA QUERIES
 @media screen and (min-width: 750px) {
   #buttonGrid {
     grid-template: repeat(2, 35px) / repeat(3, 1fr);
-    gap: .35em;
+    gap: 0.35em;
   }
-  #number5,
-  #number10,
-  #number15,
-  #number25,
-  #number50,
+  #tip,
   #custom {
     width: 100%;
   }

@@ -4,8 +4,31 @@ import Calc from "./components/Calc/Calc";
 import Display from "./components/Display/Display";
 
 function App() {
-  const [amount, setAmount] = React.useState("");
-  const [tip, setTip] = React.useState("");
+  // state variables
+  const [formData, setFormData] = React.useState({
+    amount: 0,
+    tip: 0,
+    people: 0,
+  });
+
+  // control form data
+  function inputData(event) {
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        [event.target.name]: event.target.value,
+      };
+    });
+  }
+
+  function theGreatReset() {
+    setFormData({
+      amount: 0,
+      tip: 0,
+      people: 0,
+    });
+  }
+
   return (
     <main id="appWrap">
       <div id="splitterContainer">
@@ -13,8 +36,8 @@ function App() {
         <p>TTER</p>
       </div>
       <div id="mainContainer">
-        <Calc />
-        <Display />
+        <Calc inputData={inputData} formData={formData} />
+        <Display formData={formData} reset={theGreatReset} />
       </div>
     </main>
   );

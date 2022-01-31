@@ -2,22 +2,6 @@ import React from "react";
 import "./Calc.css";
 
 export default function Calc(props) {
-  // state variables
-  const [formData, setFormData] = React.useState({
-    amount: 0,
-    tip: 0,
-    people: 0,
-  });
-
-  function inputData(event) {
-    setFormData(prevFormData => {
-        return {
-            ...prevFormData,
-            [event.target.name]: event.target.value
-        }
-    })
-}
-
   const buttonArr = [5, 10, 15, 25, 50];
 
   // all the tip buttons
@@ -25,13 +9,17 @@ export default function Calc(props) {
     <input
       type="button"
       key={i}
-      id={`number${i}`}
+      id="tip"
+      value={i}
+      // value={`${i}%`}
       name="tip"
-      onChange={inputData}
-    ></input>
+      onChange={props.inputData}
+      onClick={(e)=>props.inputData(e)}
+      // onClick={(e)=>console.log(e.target.value)}
+      ></input>
   ));
 
-  console.log(buttonMap);
+  console.log(props.formData)
 
   return (
     <main id="calcContainer">
@@ -44,7 +32,7 @@ export default function Calc(props) {
           type="text"
           id="amount"
           name="amount"
-          onChange={inputData}
+          onChange={props.inputData}
           placeholder="--"
         ></input>
         <div id="buttonContainer">
@@ -64,7 +52,7 @@ export default function Calc(props) {
           type="text"
           id="people"
           name="people"
-          onChange={inputData}
+          onChange={props.inputData}
           placeholder="--"
         ></input>
       </form>
