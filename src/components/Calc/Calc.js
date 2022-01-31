@@ -1,15 +1,38 @@
 import React from "react";
-import dollar from "../../images/icon-dollar.svg";
-import person from "../../images/icon-person.svg";
 import "./Calc.css";
 
 export default function Calc(props) {
-  const buttonArr = [1, 2, 3, 4, 5];
+  // state variables
+  const [formData, setFormData] = React.useState({
+    amount: 0,
+    tip: 0,
+    people: 0,
+  });
 
+  function inputData(event) {
+    setFormData(prevFormData => {
+        return {
+            ...prevFormData,
+            [event.target.name]: event.target.value
+        }
+    })
+}
+
+  const buttonArr = [5, 10, 15, 25, 50];
+
+  // all the tip buttons
   const buttonMap = buttonArr.map((i) => (
-    <input type="button" key={i} id={`number${i}`}></input>
+    <input
+      type="button"
+      key={i}
+      id={`number${i}`}
+      name="tip"
+      onChange={inputData}
+    ></input>
   ));
+
   console.log(buttonMap);
+
   return (
     <main id="calcContainer">
       <form id="billAmount">
@@ -17,7 +40,13 @@ export default function Calc(props) {
           Bill
           <br />
         </label>
-        <input type="text" id="amount" placeholder="--"></input>
+        <input
+          type="text"
+          id="amount"
+          name="amount"
+          onChange={inputData}
+          placeholder="--"
+        ></input>
         <div id="buttonContainer">
           <label htmlFor="custom">
             Select Tip % <br />
@@ -31,7 +60,13 @@ export default function Calc(props) {
           Number of People
           <br />
         </label>
-        <input type="text" id="people" placeholder="--"></input>
+        <input
+          type="text"
+          id="people"
+          name="people"
+          onChange={inputData}
+          placeholder="--"
+        ></input>
       </form>
     </main>
   );

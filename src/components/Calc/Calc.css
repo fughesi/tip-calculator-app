@@ -59,11 +59,11 @@ label {
   grid-template: repeat(3, 35px) / repeat(2, 1fr);
 }
 
-#number1,
-#number2,
-#number3,
-#number4,
-#number5 {
+#number5,
+#number10,
+#number15,
+#number25,
+#number50 {
   height: 2.5em;
   width: 90%;
   background-color: var(--veryDark);
@@ -73,19 +73,19 @@ label {
   font-family: "Space Mono", monospace;
 }
 
-#number1:hover,
-#number2:hover,
-#number3:hover,
-#number4:hover,
-#number5:hover {
+#number5:hover,
+#number10:hover,
+#number15:hover,
+#number25:hover,
+#number50:hover {
   background-color: var(--strongCyan);
 }
 
-#number1:active,
-#number2:active,
-#number3:active,
-#number4:active,
-#number5:active {
+#number5:active,
+#number10:active,
+#number15:active,
+#number25:active,
+#number50:active {
   background-color: var(--dark);
 }
 
@@ -111,11 +111,11 @@ MEDIA QUERIES
     grid-template: repeat(2, 35px) / repeat(3, 1fr);
     gap: .35em;
   }
-  #number1,
-  #number2,
-  #number3,
-  #number4,
   #number5,
+  #number10,
+  #number15,
+  #number25,
+  #number50,
   #custom {
     width: 100%;
   }
