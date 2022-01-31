@@ -108,3 +108,20 @@ MEDIA QUERIES
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* experimental */
+
+.isSelected {
+    transform: scale(5);
+  }

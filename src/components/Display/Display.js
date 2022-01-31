@@ -20,7 +20,7 @@ export default function Display(props) {
             <br />
             <span>/ person</span>
           </p>
-          <p id="total">${tipAmount.toFixed(2)}</p>
+          <p id="total">${tipAmount ? tipAmount.toFixed(2) : "0.00"}</p>
         </div>
         <div id="bottom">
           <p>
@@ -28,7 +28,7 @@ export default function Display(props) {
             <br />
             <span>/ person</span>
           </p>
-          <p id="total">${total.toFixed(2)}</p>
+          <p id="total">${total ? total.toFixed(2) : "0.00"}</p>
         </div>
       </div>
       <div id="displayBottom">

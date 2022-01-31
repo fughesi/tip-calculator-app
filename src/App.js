@@ -6,9 +6,9 @@ import Display from "./components/Display/Display";
 function App() {
   // state variables
   const [formData, setFormData] = React.useState({
-    amount: 0,
-    tip: 0,
-    people: 0,
+    amount: "",
+    tip: "",
+    people: "",
   });
 
   // control form data
@@ -23,9 +23,9 @@ function App() {
 
   function theGreatReset() {
     setFormData({
-      amount: 0,
-      tip: 0,
-      people: 0,
+      amount: "",
+      tip: "",
+      people: "",
     });
   }
 
