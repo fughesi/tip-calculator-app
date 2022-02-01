@@ -21,6 +21,7 @@ function App() {
     });
   }
 
+  // reset button function
   function theGreatReset() {
     setFormData({
       amount: "",
